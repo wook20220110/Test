@@ -9,7 +9,7 @@ on:
       buildConfiguration:
         description: 'Build configuration'
         required: true
-        default: 'test'
+        default: 'Release'
         type: choice
         options:
         - Release
