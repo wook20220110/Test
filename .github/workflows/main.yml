@@ -3,17 +3,26 @@
 name: CI
 
 # Controls when the workflow will run
-on:
+on: 
   workflow_dispatch:
     inputs:
-      buildConfiguration:
-        description: 'Build configuration'
+      logLevel:
+        description: 'Log level'     
         required: true
-        default: 'Release'
-      releaseName:
-        description: 'Release name'
-        required: true
-        default: 'QA'
+        default: 'warning' 
+        type: choice
+        options:
+        - info
+        - warning
+        - debug 
+      tags:
+        description: 'Test scenario tags'
+        required: false 
+        type: boolean
+      environment:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true 
         
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
