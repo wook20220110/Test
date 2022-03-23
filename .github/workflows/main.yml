@@ -9,8 +9,12 @@ on:
       buildConfiguration:
         description: 'Build configuration'
         required: true
+        default: 'Release'
+      releaseName:
+        description: 'Release name'
+        required: true
         default: 'QA'
-
+        
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
