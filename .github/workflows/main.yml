@@ -2,8 +2,7 @@
 
 name: CI
 
-# Controls when the workflow will run
-on: 
+on:
   workflow_dispatch:
     inputs:
       buildConfiguration:
